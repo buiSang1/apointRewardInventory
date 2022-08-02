@@ -12,7 +12,7 @@
 
 :host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination {
   position: relative;
-  right: 850px;
+  right: 845px;
 }
 
 :host ::ng-deep ng2-smart-table li {
@@ -34,11 +34,13 @@
 :host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination li a  {
   position: relative;
   top: 15px;
+  padding: 1.1rem 1.27rem;
 }
 :host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination li>span {
   position: relative;
   top: 15px;
-  padding: 1.1rem 1.25rem;
+  padding: 1.1rem 1.28rem;
+
 }
 
 .inventory-search {

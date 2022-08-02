@@ -119,7 +119,7 @@
       </nb-card-body>
       <nb-card-footer>
         <div style="float: right;">
-          <button nbButton (click)="clearForm()"  status="info">
+          <button nbButton (click)="clearForm()" status="info">
             Clear
           </button>
           <button style="margin-left: 10px; " class="btn-submit" *ngIf="id === '0'" (click)="RegisterInventory()"
@@ -127,7 +127,7 @@
             Save
           </button>
           <button style="margin-left: 10px; " class="btn-submit" *ngIf="id != '0' " (click)="updateRewardInventory()"
-            nbButton status="info">
+            [disabled]="!registerForm.valid" nbButton status="info">
             Update
           </button>
         </div>
