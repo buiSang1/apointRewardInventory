@@ -1,0 +1,12 @@
+<nb-card style="height: 200px; ">
+  <nb-card-header>
+    Delete Inventory
+  </nb-card-header>
+  <nb-card-body >
+    Are you sure you want to delete your reward inventory ?
+  </nb-card-body>
+  <nb-card-footer >
+    <button style="float: right;" (click)="RemoveRewardInventory()" (click)="showToast(physicalPositions.BOTTOM_RIGHT, 'success', 1000)" nbButton status="success">Yes</button>
+    <button style="float: right;margin-right: 10px" (click)="cancel()"  nbButton status="warning">No</button>
+  </nb-card-footer>
+</nb-card>

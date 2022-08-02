@@ -1,0 +1,43 @@
+:host ::ng-deep ng2-st-tbody-custom {
+    a.ng2-smart-action.ng2-smart-action-custom-custom{
+        display: contents;      
+    }
+  }
+
+  :host ::ng-deep ng2-st-tbody-custom > a > img {
+    margin-left: 20px;
+  }
+
+  :host ::ng-deep ng2-smart-table .ng2-smart-actions > ng2-st-tbody-edit-delete {
+    position: fixed;
+  }
+
+  :host ::ng-deep ng2-smart-table .ng2-smart-actions{
+    width: 130px;
+} 
+
+  .inventory-card {
+    nb-card-body {
+      display: block;
+  
+      p {
+        font-weight: 600;
+        font-size: 17px;
+      }
+  
+      .container {
+        display: flex;
+        margin-top: 15px;
+  
+        .row {
+          width: 100%;
+  
+        }
+  
+      }
+    }
+  }
+
+  .search-button{
+    width: 150px;
+  }

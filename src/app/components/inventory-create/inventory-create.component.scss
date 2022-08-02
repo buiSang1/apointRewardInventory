@@ -1,0 +1,87 @@
+nb-layout-header {
+  h1 {
+    color: red;
+  }
+}
+
+nb-card-body {
+  display: block;
+
+  p {
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .container {
+    display: flex;
+    margin-top: 15px;
+
+    .row {
+      width: 100%;
+
+    }
+  }
+}
+
+.footer-distributed {
+  width: 100%;
+  font: bold 16px sans-serif;
+  overflow: hidden;
+
+  .footer-left {
+    text-align: center;
+  }
+
+  h3 {
+    color: #000000;
+    font: normal 36px 'Roboto';
+    margin: 0 0 15px;
+
+    span {
+      color: #5383d3;
+    }
+  }
+
+  .footer-links {
+    color: #000000;
+    margin: 0 0 10px;
+    padding: 0;
+
+    a {
+      display: inline-block;
+      line-height: 1.8;
+      font-weight: 400;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+
+  .footer-icons {
+    margin-top: 30px;
+
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+  }
+
+}

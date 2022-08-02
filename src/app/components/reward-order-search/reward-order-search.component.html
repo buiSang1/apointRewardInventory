@@ -1,0 +1,142 @@
+<br>
+<h1 style="text-align: center;">REWARD ORDER</h1>
+<br>
+    <button class="search-button" nbButton size="small" status="primary" shape="round" style="float: right;">New</button>
+<br>
+<br>
+<br>
+<nb-card class="inventory-card" >
+    <nb-card-header (click)="toggleCard()" style="cursor: pointer;">
+      <h5>Search Reward Order       
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isCard" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isCard" icon="arrow-ios-upward-outline"></nb-icon>
+      </h5>
+    </nb-card-header>
+    <nb-card-body *ngIf="isCard" [formGroup]="searchOrderForm">
+      
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>User</p>
+            <!-- <input nbInput type="text" placeholder="Search by user id" fullWidth formControlName="userid" /> -->
+            <input 
+            id="search-by-name"
+            type="text"
+            formControlName="user"
+            fullWidth
+            class="search-input"
+            nbInput
+            placeholder="User Name"
+          />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>Reward</p>
+            <!-- <input nbInput type="text" placeholder="Search by reward name" fullWidth formControlName="rewardid" /> -->
+            <input 
+            id="search-by-name"
+            type="text"
+            formControlName="reward"
+            fullWidth
+            class="search-input"
+            nbInput
+            placeholder="Reward Name"
+          />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>Status</p>
+            <nb-select placeholder="Search by status" fullWidth formControlName="status" >
+              <nb-option value="">None</nb-option>
+              <nb-option value="01">New</nb-option>
+              <nb-option value="02">Approved</nb-option>
+              <nb-option value="03">Claimed</nb-option>
+            </nb-select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>Date</p>
+            <input nbInput fullWidth placeholder="Pick Date Range" [nbDatepicker]="formpicker" formControlName="create_at" >
+            <nb-rangepicker #formpicker ></nb-rangepicker>
+          </div>
+        </div>
+
+<!--         <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>Remask</p>
+            <input nbInput type="text" placeholder="Search by remask" fullWidth formControlName="remask"/>
+          </div>
+        </div> -->
+
+      </div>
+
+      <!-- <div class="container">
+        
+        <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>Search From Date</p>
+            <input nbInput placeholder="From Date" [nbDatepicker]="from" formControlName="from" fullWidth>
+            <nb-datepicker #from></nb-datepicker>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1" style="margin-right: 10px;">
+            <p>Search To Date</p>
+            <input nbInput placeholder="To Date" [nbDatepicker]="to" formControlName="to" fullWidth>
+            <nb-datepicker #to></nb-datepicker>
+          </div>
+        </div> -->
+
+        <!-- <div class="row">
+          <div class="col-md-1">
+            <p>Approve At</p>
+            <input nbInput type="text" placeholder="Search by approve at" fullWidth formControlName="ApproveAt"/>
+          </div>
+        </div> -->
+
+      <!-- </div> -->
+
+      <br>
+      <br>
+
+      <div style="float: right;">
+      <button class="btn-cancel" class="search-button" size="small" nbButton shape="round" status="primary" (click)="resetSearchForm()">
+        Reset
+      </button>
+      <button style="margin-left: 10px" class="search-button" size="small" nbButton shape="round" status="primary" (click)="searchRewardOrder()">
+        Search
+      </button>
+    </div>
+    </nb-card-body>
+  </nb-card>
+
+
+
+
+<nb-card>
+    <nb-card-header (click)="toogleBelowCard()" style="cursor: pointer;">
+        <h5>Reward Order
+      
+              <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isBelowCard" icon="arrow-ios-downward-outline"></nb-icon>
+              <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isBelowCard" icon="arrow-ios-upward-outline"></nb-icon>
+         
+          </h5>
+    </nb-card-header>
+    <nb-card-body  *ngIf="isBelowCard">
+        <ng2-smart-table [settings]="settings" [source]="reward_order">
+        
+        </ng2-smart-table>
+    </nb-card-body>
+  </nb-card>
