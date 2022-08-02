@@ -1,43 +1,96 @@
 :host ::ng-deep ng2-st-tbody-custom {
-    a.ng2-smart-action.ng2-smart-action-custom-custom{
-        display: contents;
-    }
+  a.ng2-smart-action.ng2-smart-action-custom-custom {
+    display: contents;
   }
+}
 
-  :host ::ng-deep ng2-st-tbody-custom > a > img {
-    margin-left: 12px;
-   /*  position: relative;
+:host ::ng-deep ng2-st-tbody-custom>a>img {
+  margin-left: 12px;
+  /*  position: relative;
     top: 25px; */
+}
+
+:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination {
+  position: relative;
+  right: 850px;
+}
+
+:host ::ng-deep ng2-smart-table li {
+  height: 50px;
+  width: 50px;
+}
+
+:host ::ng-deep ng2-smart-table li {
+  height: 50px;
+  width: 50px;
+}
+
+:host ::ng-deep ng2-smart-table .ng2-smart-actions>ng2-st-tbody-edit-delete {
+  display: none;
+  position: fixed;
+
+}
+
+:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination li a  {
+  position: relative;
+  top: 15px;
+}
+:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination li>span {
+  position: relative;
+  top: 15px;
+  padding: 1.1rem 1.25rem;
+}
+
+.inventory-search {
+  border-radius: 20px;
+
+  h5 {
+    color: #3a86ff;
   }
 
-  :host ::ng-deep ng2-smart-table .ng2-smart-actions > ng2-st-tbody-edit-delete {
-    display: none;
-    position: fixed;
+  .bottom-radius {
 
+    border-bottom: 3px solid #cad2c5;
+    padding-top: 7px;
   }
 
-  .inventory-card {
-    nb-card-body {
-      display: block;
+  nb-card-body {
+    display: block;
+    padding-bottom: 50px;
 
-      p {
-        font-weight: 600;
-        font-size: 17px;
-      }
+    p {
+      font-weight: 600;
+      font-size: 17px;
+    }
 
-      .container {
-        display: flex;
-        margin-top: 15px;
+    .container {
+      display: flex;
+      margin-top: 15px;
 
-        .row {
-          width: 100%;
-
-        }
+      .row {
+        width: 100%;
 
       }
+
     }
   }
+}
 
-  .search-button{
-    width: 150px;
+.inventory-result {
+  border-radius: 20px;
+
+  h5 {
+    color: #3a86ff;
   }
+
+  .bottom-radius {
+    border-bottom: 3px solid #cad2c5;
+    padding-top: 7px;
+  }
+}
+
+.search-button {
+
+  width: 150px;
+
+}

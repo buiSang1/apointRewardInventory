@@ -17,14 +17,14 @@
   <nb-layout-column>
     <nb-card style="width: 1500px; margin-left: 281px; margin-top: 10px">
       <nb-card-header (click)="toggleCard()" style="cursor: pointer">
-        <h3 style="text-align: center;" *ngIf="id === '0'">Register Inventory
+        <h3 style="text-align: center; color: #3a86ff; " *ngIf="id === '0'">Register Inventory
           <button nbButton status="default" style="float: right;">
             <nb-icon *ngIf="!isCard" (click)="toggleCard()" icon="arrow-ios-downward-outline"></nb-icon>
             <nb-icon *ngIf="isCard" (click)="toggleCard()" icon="arrow-ios-upward-outline"></nb-icon>
           </button>
 
         </h3>
-        <h3 style="text-align: center;" *ngIf="id != '0'">Update Inventory
+        <h3 style="text-align: center; color: #3a86ff;" *ngIf="id != '0'">Update Inventory
           <button nbButton status="default" style="float: right;">
             <nb-icon *ngIf="!isCard" (click)="toggleCard()" icon="arrow-ios-downward-outline"></nb-icon>
             <nb-icon *ngIf="isCard" (click)="toggleCard()" icon="arrow-ios-upward-outline"></nb-icon>
@@ -119,15 +119,15 @@
       </nb-card-body>
       <nb-card-footer>
         <div style="float: right;">
-          <button nbButton (click)="clearForm()" status="default">
+          <button nbButton (click)="clearForm()"  status="info">
             Clear
           </button>
-          <button style="margin-left: 10px" class="btn-submit" *ngIf="id === '0'" (click)="RegisterInventory()"
-            [disabled]="!registerForm.valid" nbButton status="default">
+          <button style="margin-left: 10px; " class="btn-submit" *ngIf="id === '0'" (click)="RegisterInventory()"
+            [disabled]="!registerForm.valid" nbButton status="info">
             Save
           </button>
-          <button style="margin-left: 10px" class="btn-submit" *ngIf="id != '0' " (click)="updateRewardInventory()"
-            nbButton status="default">
+          <button style="margin-left: 10px; " class="btn-submit" *ngIf="id != '0' " (click)="updateRewardInventory()"
+            nbButton status="info">
             Update
           </button>
         </div>

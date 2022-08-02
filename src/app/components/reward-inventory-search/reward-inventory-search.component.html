@@ -12,27 +12,27 @@
   </nb-layout-header>
   <nb-layout-column>
 
+    <h1 style="text-align: center; color: #3a86ff;
+    ">Reward inventory list</h1>
 
-    <br>
-    <h1 style="text-align: center;">Reward inventory list</h1>
-    <br>
     <button class="search-button" nbButton size="small" (click)="addIventory()" status="primary" shape="round"
-      style="float: right;">New</button>
+      style="float: right; ">New</button>
     <br>
     <br>
     <br>
-    <nb-card class="inventory-card">
-      <nb-card-header (click)="toggleCard()" style="cursor: pointer;">
-        <h5>Search Reward Inventory
-          <!-- <button nbButton status="default" style="float: right;"> -->
-          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isCard" icon="arrow-ios-downward-outline"></nb-icon>
-          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isCard" icon="arrow-ios-upward-outline"></nb-icon>
-          <!-- </button> -->
+    <nb-card class="inventory-search">
 
+      <nb-card-header (click)="toggleCard()" style="cursor: pointer; ">
+        <h5>Search
+          <!-- <button nbButton status="default" style="float: right;"> -->
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isCard" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isCard" icon="arrow-ios-upward-outline"></nb-icon>
+          <!-- </button> -->
+          <div class="bottom-radius" *ngIf="!isCard"></div>
         </h5>
 
       </nb-card-header>
-      <nb-card-body *ngIf="isCard" [formGroup]="searchForm">
+      <nb-card-body *ngIf="!isCard" [formGroup]="searchForm">
 
         <div class="container">
 
@@ -124,7 +124,7 @@
 
         </div>
 
-        <!--       <p>Images</p>
+        <!--  <p>Images</p>
       <input nbInput type="text" placeholder="Please input url image" fullWidth /> -->
 
         <br>
@@ -141,29 +141,12 @@
           </button>
         </div>
       </nb-card-body>
-      <!--     <nb-card-footer>
-      <button class="btn-cancel" nbButton status="default" >
-        Clear
-      </button>
-      <button style="margin-left: 10px" class="btn-submit" nbButton status="default">
-        Search
-      </button>
-    </nb-card-footer> -->
     </nb-card>
 
+    <nb-card class="inventory-result">
+      <nb-card-header (click)="toogleBelowCard()" style="cursor: pointer;  ">
 
-
-
-
-
-
-
-
-
-    <!-- <ng2-smart-table [settings]="settings" [source]="reward_inventor"></ng2-smart-table> -->
-    <nb-card>
-      <nb-card-header (click)="toogleBelowCard()" style="cursor: pointer;">
-        <h5>Reward Inventory
+        <h5>Result
 
           <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isBelowCard" icon="arrow-ios-downward-outline">
           </nb-icon>
@@ -171,6 +154,7 @@
           </nb-icon>
 
         </h5>
+        <div class="bottom-radius" *ngIf="isBelowCard"></div>
       </nb-card-header>
       <nb-card-body *ngIf="isBelowCard">
         <ng2-smart-table [settings]="settings" [source]="reward_inventory" (custom)="onCustomEvent($event)">
