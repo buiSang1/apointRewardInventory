@@ -1,27 +1,61 @@
-nb-layout-header {
-  h1 {
-    color: red;
+nb-actions {
+  nb-action {
+    border: none;
+    font-size: 20px;
   }
 }
 
-nb-card-body {
-  display: block;
+nb-layout-column {
+  text-align: -webkit-center;
 
-  p {
-    font-weight: 600;
-    font-size: 17px;
-  }
+  .card-registerForm {
+    max-width: 1600px;
 
-  .container {
-    display: flex;
-    margin-top: 15px;
+    border-radius: 20px;
 
-    .row {
-      width: 100%;
+    nb-card-header {
+      border-bottom: #ffffff;
 
+      .bottom-radius {
+        padding-bottom: 15px;
+        border-bottom: 3px solid #cad2c5;
+
+      }
+
+    }
+
+    nb-card-body {
+      display: block;
+
+      // flex reponsive
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        // margin-top: 15px;
+
+
+        .row {
+          flex: 1 1 500px;
+          padding: 12px;
+
+          p {
+
+            float: left;
+            font-weight: 600;
+            font-size: 17px;
+
+
+          }
+        }
+      }
+    }
+
+    nb-card-footer {
+      border: #ffffff;
     }
   }
 }
+
 
 .footer-distributed {
   width: 100%;

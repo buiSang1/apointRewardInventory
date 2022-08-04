@@ -1,3 +1,4 @@
+
 :host ::ng-deep ng2-st-tbody-custom {
   a.ng2-smart-action.ng2-smart-action-custom-custom {
     display: contents;
@@ -6,23 +7,10 @@
 
 :host ::ng-deep ng2-st-tbody-custom>a>img {
   margin-left: 12px;
-  /*  position: relative;
-    top: 25px; */
 }
 
-:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination {
-  position: relative;
-  right: 845px;
-}
-
-:host ::ng-deep ng2-smart-table li {
-  height: 50px;
-  width: 50px;
-}
-
-:host ::ng-deep ng2-smart-table li {
-  height: 50px;
-  width: 50px;
+:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav {
+  float: left;
 }
 
 :host ::ng-deep ng2-smart-table .ng2-smart-actions>ng2-st-tbody-edit-delete {
@@ -31,20 +19,18 @@
 
 }
 
-:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination li a  {
+:host ::ng-deep ng2-smart-table .page-link {
   position: relative;
-  top: 15px;
-  padding: 1.1rem 1.27rem;
-}
-:host ::ng-deep ng2-smart-table nav.ng2-smart-pagination-nav .pagination li>span {
-  position: relative;
-  top: 15px;
-  padding: 1.1rem 1.28rem;
-
+  display: block;
+  margin-left: -1px;
 }
 
 .inventory-search {
   border-radius: 20px;
+
+  nb-card-header {
+    border: #ffffff;
+  }
 
   h5 {
     color: #3a86ff;
@@ -75,11 +61,38 @@
       }
 
     }
+
+  }
+
+  .footer-btn {
+    margin: 30px 0 -25px 0;
   }
 }
 
 .inventory-result {
   border-radius: 20px;
+
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #10529d !important;
+    outline: 1px solid slategrey;
+    border-radius: 3px !important;
+    cursor: pointer;
+  }
+
+
+
+  nb-card-header {
+    border: #ffffff;
+  }
 
   h5 {
     color: #3a86ff;
@@ -89,6 +102,7 @@
     border-bottom: 3px solid #cad2c5;
     padding-top: 7px;
   }
+
 }
 
 .search-button {
