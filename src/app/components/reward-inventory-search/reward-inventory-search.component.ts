@@ -327,7 +327,7 @@ export class RewardInventorySearchComponent implements OnInit {
           }
           else { return }
         }
-      }
+      },
     }
   };
 

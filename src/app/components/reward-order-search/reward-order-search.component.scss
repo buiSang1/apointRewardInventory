@@ -1,6 +1,6 @@
 :host ::ng-deep ng2-st-tbody-custom {
     a.ng2-smart-action.ng2-smart-action-custom-custom{
-        display: contents;      
+        display: contents;
     }
   }
 
@@ -14,26 +14,32 @@
 
   :host ::ng-deep ng2-smart-table .ng2-smart-actions{
     width: 130px;
-} 
+}
+
+:host ::ng-deep ng2-smart-table .page-link {
+  position: relative;
+  display: block;
+  margin-left: -1px;
+}
 
   .inventory-card {
     nb-card-body {
       display: block;
-  
+
       p {
         font-weight: 600;
         font-size: 17px;
       }
-  
+
       .container {
         display: flex;
         margin-top: 15px;
-  
+
         .row {
           width: 100%;
-  
+
         }
-  
+
       }
     }
   }
@@ -41,3 +47,5 @@
   .search-button{
     width: 150px;
   }
+
+

@@ -13,14 +13,14 @@
   <nb-layout-column>
     <h1 style="text-align: center; color: #3a86ff; ">Reward inventory list</h1>
     <button class="search-button" nbButton size="small" (click)="addIventory()" status="primary" shape="round"
-      style="float: right; ">New</button>
+      style="float: right;">New</button>
     <br>
     <br>
     <br>
     <nb-card class="inventory-search">
 
-      <nb-card-header (click)="toggleCard()" style="cursor: pointer; ">
-        <h5>Search
+      <nb-card-header (click)="toggleCard()" style="cursor: pointer;  ">
+        <h5 >Search
           <!-- <button nbButton status="default" style="float: right;"> -->
           <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isCard" icon="arrow-ios-downward-outline"></nb-icon>
           <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isCard" icon="arrow-ios-upward-outline"></nb-icon>
